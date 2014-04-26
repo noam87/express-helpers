@@ -1,9 +1,9 @@
 ## Express Helpers
 
-Just a bunch of useful middleware for reuse accross 
+Just a bunch of useful middleware for reuse accross
 [express](http://expressjs.com) apps.
 
-## Usage 
+## Usage
 
 ### npm install
 
@@ -11,32 +11,34 @@ Just a bunch of useful middleware for reuse accross
 
 ### App.js
 
-    Cf = require('clusterfoo.express-helpers');
+``` js
+Cf = require('clusterfoo.express-helpers');
 
-    App.use(Express.favicon());
-    // Pass stuff around with a res.pass object
-    App.use(Cf.pass);
-    App.use(Express.logger('dev'));
+App.use(Express.favicon());
+// Pass stuff around with a res.pass object
+App.use(Cf.pass);
+App.use(Express.logger('dev'));
 
-    // ...
+// ...
 
-    // Allow cross domain cookies
-    App.use(Cf.allowCrossDomain);
-    App.use(Express.cookieParser('secret'));
+// Allow cross domain cookies
+App.use(Cf.allowCrossDomain);
+App.use(Express.cookieParser('secret'));
 
-    // ...
+// ...
 
-    App.use(App.router);
-    // Handle errors with an optional callback function:
-    App.use(function(req, res, next) {
-        // Passing an error-handling callback:
-        res.pass.errFn = function(err) { 
-            doSomethingWithError(err); 
-            next(err); } 
-    });
-    App.use(Cf.error);
+App.use(App.router);
+// Handle errors with an optional callback function:
+App.use(function(req, res, next) {
+    // Passing an error-handling callback:
+    res.pass.errFn = function(err) {
+        doSomethingWithError(err);
+        next(err); }
+});
+App.use(Cf.error);
+```
 
-## License: MIT
+--- 
 
 The MIT License (MIT)
 
