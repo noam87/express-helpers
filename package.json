@@ -1,5 +1,5 @@
 {
-  "name": "express-helpers",
+  "name": "clusterfoo.express-helpers",
   "version": "1.0.0",
   "description": "Some helper middleware for Express",
   "main": "index.js",
