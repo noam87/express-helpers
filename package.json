@@ -1,0 +1,23 @@
+{
+  "name": "express-helpers",
+  "version": "1.0.0",
+  "description": "Some helper middleware for Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CLUSTERfoo/express-helpers.git"
+  },
+  "keywords": [
+    "express",
+    "middleware"
+  ],
+  "author": "Noam Gagliardi-Rabinovich <noam@clusterfoo.com> (http://clusterfoo.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CLUSTERfoo/express-helpers/issues"
+  },
+  "homepage": "https://github.com/CLUSTERfoo/express-helpers"
+}
